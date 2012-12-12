@@ -1,3 +1,3 @@
 #!/bin/sh
 
-PYTHONPATH=../ ../bin/codestats
+PYTHONPATH=../ ../bin/codestatd

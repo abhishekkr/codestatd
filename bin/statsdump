@@ -2,8 +2,8 @@
 
 import sys
 
-from codestats import collector
-from codestats import data_handler
+from codestatd import collector
+from codestatd import data_handler
 
 DEFAULT_SAMPLES_PATH = 'samples.hist'
 DEFAULT_CSV_PATH = 'samples.csv'

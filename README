@@ -1,2 +1,30 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ C     O     D     E     S     T     A     T     D
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+  daemon analyzing your attention & effect on code
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+You put to task of analyzing any of your supported language codebase
+  providing the build/test action to be performed.
+And it will keep a check on it at desired intervals mapping state of
+  errors/warnings/more indicating if you need to take a break or consulting.
+
+Requires: Python
+
+(To Be) Supported Programming Languages:
+   [+] C
+   [+] C++
+   [+] Clojure
+   [+] Erlang
+   [+] Haskell
+   [+] Java
+   [+] NodeJS
+   [+] Python
+   [+] Ruby
+   [+] R
+
+
 Keeping track of stats for you of your code.
-[as by ZedShaw]
+[inspired from Zed Shaw's codestats exercise]

@@ -1,4 +1,4 @@
-# used in codestats.py
+# used in collector
 
 from math import sqrt
 
