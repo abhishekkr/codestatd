@@ -1,13 +1,15 @@
 #!/usr/bin/env python
 
+import sys
+
 from codestats import collector
 from codestats import data_handler
 
 DEFAULT_SAMPLES_PATH = 'samples.hist'
 DEFAULT_CSV_PATH = 'samples.csv'
 
+collector.collect(sys.argv[1:], DEFAULT_SAMPLES_PATH)
 collector.print_samples(DEFAULT_SAMPLES_PATH)
 
 data_handler.save_to_csv(DEFAULT_SAMPLES_PATH, DEFAULT_CSV_PATH)
-
-# data_handler
+# data_handler.export_to_R
