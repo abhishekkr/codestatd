@@ -1,11 +1,10 @@
-#!/usr/bin/env python
+#
 
 import popen2
 import re
-import shelve
 
+import data_handler
 import stats
-
 
 
 def parse_counts(results, errors):
@@ -31,21 +30,14 @@ def produce_samples(counts, samples):
 
 
 
-def load_history(path):
-  return shelve.open(path)
-
-def save_history(db):
-  db.sync()
-  db.close()
-
-
-
-def print_stats(samples):
+def print_samples(samples_path):
+  samples = data_handler.load_history(samples_path)
   for kind, stats in samples.items():
-    print kind, " Count:", stats.count
+    print "\n", kind, " Count:", stats.count
     print " Min:", stats.min, " Max:", stats.max,
     print " Standard Deviation:", stats.standard_deviation,
     print " Mean:", stats.mean
+  data_handler.save_history(samples)
 
 
 
@@ -64,12 +56,11 @@ def c_make_results(block):
 
 
 
-def collect(block):
-  history = load_history('samples.history')
+def collect(block, samples_path):
+  history = data_handler.load_history(samples_path)
   results = c_make_results(block)
   print "\n".join(results)
   errors  = printed_errors(results)
   counts  = parse_counts(results, errors)
   samples = produce_samples(counts, history)
-  print_stats(samples)
-  save_history(history)
+  data_handler.save_history(history)

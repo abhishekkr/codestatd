@@ -3,4 +3,7 @@
 import sys
 from codestats import collector
 
-collector.collect(sys.argv[1:])
+DEFAULT_SAMPLES_PATH = 'samples.hist'
+
+collector.collect(sys.argv[1:], DEFAULT_SAMPLES_PATH)
+collector.print_samples(DEFAULT_SAMPLES_PATH)

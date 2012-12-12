@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+from codestats import collector
+from codestats import data_handler
+
+DEFAULT_SAMPLES_PATH = 'samples.hist'
+DEFAULT_CSV_PATH = 'samples.csv'
+
+collector.print_samples(DEFAULT_SAMPLES_PATH)
+
+data_handler.save_to_csv(DEFAULT_SAMPLES_PATH, DEFAULT_CSV_PATH)
+
+# data_handler
