@@ -9,14 +9,16 @@ import stats
 
 def parse_counts(results, errors):
   counts = {}
+  success = 'true'
 
   for line in results:
     m = errors.match(line)
     if m:
+      success = 'false'
       stat = m.groups()[0]
       if stat not in counts: counts[stat] = 0
       counts[stat] += 1
-
+  if success=='true': counts['error'] = 0
   return counts
 
 
