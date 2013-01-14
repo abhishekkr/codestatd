@@ -13,11 +13,13 @@ And it will keep a check on it at desired intervals mapping state of
 
 Requires: Python
 
+Supporting:
+   [+] gcc/g++ for C/C++
+
 (To Be) Supported Programming Languages:
-   [+] C
-   [+] C++
    [+] Clojure
    [+] Erlang
+   [+] Go
    [+] Haskell
    [+] Java
    [+] NodeJS
